@@ -131,14 +131,32 @@ C:\Program Files\OpenSSL-Win64
 В терминале поочерёдно вбиваем эти команды:
 ```bash
 git -v
+```
+```bash
 rustup --version
+```
+```bash
 cargo --version
+```
+```bash
 openssl version
+```
+```bash
 echo %OPENSSL_DIR%
+```
+```bash
 sqlite3 --version
+```
+```bash
 perl -v
+```
+```bash
 cmake --version
+```
+```bash
 nasm -v
+```
+```bash
 protoc --version
 ```
 
@@ -204,6 +222,54 @@ openssl ec -in ticket_private.pem -pubout -out ticket_public.pem
 <img width="1008" height="383" alt="C__Windows_System32_cmd exe 25 01 2026 2_11_01" src="https://github.com/user-attachments/assets/fd9f8a9b-b432-41f7-b29d-057d16646658" />  
 
 В папке «rpcn» должные появиться следующие файлы: *cert.pem*, *key.pem*, *ticket_public.pem*, *ticket_private.pem*.
+
+### 5. Конфигурация сервера
+В папке «rpcn» находим файл *rpcn.cfg* и открываем его. Удаляем весь текст там и вставляем этот:
+```bash
+CreateMissing=true
+Verbosity=Info
+Host=0.0.0.0
+Port=31313
+HostIPv6=::
+EmailValidated=false
+EmailHost=
+EmailLogin=
+EmailPassword=
+SignTickets=true
+SignTicketsDigest=SHA224
+StatServer=false
+StatServerHost=0.0.0.0
+StatServerPort=31314
+StatServerCacheLife=1
+AdminsList=
+MaxConnections=500
+
+[database]
+provider = "sqlite" 
+connection_string = "rpcn.db"
+
+[tls]
+certificate_path = "cert.pem"
+key_path = "key.pem"
+
+ticket_private_key_path = "ticket_private.pem"
+ticket_public_key_path = "ticket_public.pem"
+```
+Сохраняем файл.
+> :warning: Файл конфигурации не переименовываем и не перемещаем в другую папку, иначе сервер его не найдёт.
+
+### 6. BAT-файл  
+Чтобы каждый раз не запускать сервер через терминал, нужно создать bat-файл. В папке «rpcn» создаём текстовый файл и вставляем туда это: 
+```bash
+@echo off
+title RPCN Private Server
+
+.\target\release\rpcn.exe
+
+pause
+```
+После этого надо поменять расширения файла с .txt на .bat . Теперь сервер можно запускать двойным кликом по этому файлу, также можно создать ярлык этого файла для рабочего стола.
+
 
 
 
