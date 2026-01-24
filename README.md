@@ -3,9 +3,16 @@
 ### 1. Подготовка программного обеспечения
 > **ВАЖНО!!!** Пути установки не меняем, это облегчит жизнь в дальнейшем.
 
-* **1.1 Git SCM:** [Скачать здесь](https://git-scm.com/install/windows)
+* **1.1 Git SCM:** [Скачать здесь](https://git-scm.com/install/windows)  
   (Все параметры установки оставляем по умолчанию).
   
 * **1.2 Visual Studio 2022:**
   (Сама программа не нужна, нужны её библиотеки).
-  Нажимаем «Win+R», затем пишем cmd и жмём «Ctrl + Shift + Enter» (чтобы терминал запустился от имени администратора). В терминале пишем команду:
+  Нажимаем `Win+R`, затем пишем cmd и жмём `Ctrl + Shift + Enter` (чтобы терминал запустился от имени администратора). В терминале пишем команду:  
+```bash
+winget install Microsoft.VisualStudio.2022.Community --override "--add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended --passive"
+```
+  После этого надо согласиться с условиями пользователя, для этого пишем **Y** жмём `Enter`. Далее скачивание и установка произойдут автоматически.
+* **1.3 Rust** [Скачать здесь](https://rust-lang.org/tools/install/)  
+  После запуска установщика, будет предложено три параметра. Нам нужен первый, так что просто жмём `Enter`.   
+  <img width="625" height="313" alt="image" src="https://github.com/user-attachments/assets/780d779f-c844-4b3f-81e7-5c8cd0ae08f8" />
