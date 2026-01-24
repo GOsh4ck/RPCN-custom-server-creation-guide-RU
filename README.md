@@ -170,6 +170,43 @@ cargo build --release
 
 <img width="960" height="97" alt="C__Windows_System32_cmd exe 25 01 2026 1_56_56" src="https://github.com/user-attachments/assets/13a9e155-2355-4cae-a7ca-42a836e98c61" />
 
+### 4. Сертификаты, ключи и билеты
+* **4.1** Запускаем cmd в папке «rpcn» и вбиваем:
+```bash
+openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 3650 -nodes -subj "/CN=localhost"
+```
+В терминале будет куча звёздочек, плюсиков и точек, так и задумано.
+
+<img width="1008" height="267" alt="C__Windows_System32_cmd exe 25 01 2026 2_00_29" src="https://github.com/user-attachments/assets/7bc5b0fd-40db-4217-88cc-4d52da5ba348" />
+
+Терминал пока не закрываем.
+
+---
+
+* **4.2** Вбиваем в терминале:
+```bash
+openssl ecparam -name prime256v1 -genkey -noout -out ticket_private.pem
+```
+Если после ввода команды в терминале ничего не появилось, значит, что всё получилось.
+
+<img width="1008" height="349" alt="C__Windows_System32_cmd exe 25 01 2026 2_06_22" src="https://github.com/user-attachments/assets/0ba4caa4-6182-4bfb-9516-da524be651fd" />  
+   
+Оставляем терминал открытым.
+
+---
+
+* **4.3** Вбиваем в терминале:
+```bash
+openssl ec -in ticket_private.pem -pubout -out ticket_public.pem
+```
+После этого должно появится сообщение *writing EC key* или ничего не появиться, что означает, что всё прошло успешно.  
+
+<img width="1008" height="383" alt="C__Windows_System32_cmd exe 25 01 2026 2_11_01" src="https://github.com/user-attachments/assets/fd9f8a9b-b432-41f7-b29d-057d16646658" />  
+
+В папке «rpcn» должные появиться следующие файлы: *cert.pem*, *key.pem*, *ticket_public.pem*, *ticket_private.pem*.
+
+
+
 
 
 
