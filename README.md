@@ -5,6 +5,8 @@
 
 * **1.1 Git SCM:** [Скачать здесь](https://git-scm.com/install/windows)  
   (Все параметры установки оставляем по умолчанию).
+
+---
   
 * **1.2 Visual Studio 2022:**
   (Сама программа не нужна, нужны её библиотеки).
@@ -13,6 +15,76 @@
 winget install Microsoft.VisualStudio.2022.Community --override "--add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended --passive"
 ```
   После этого надо согласиться с условиями пользователя, для этого пишем **Y** жмём `Enter`. Далее скачивание и установка произойдут автоматически.
+
+---
+  
 * **1.3 Rust** [Скачать здесь](https://rust-lang.org/tools/install/)  
   После запуска установщика, будет предложено три параметра. Нам нужен первый, так что просто жмём `Enter`.   
   <img width="625" height="313" alt="image" src="https://github.com/user-attachments/assets/780d779f-c844-4b3f-81e7-5c8cd0ae08f8" />
+
+---
+  
+* **1.4 SQLite** [Скачать здесь](https://sqlite.org/download.html).
+  В названии нужного архива должно быть **sqlite-tools-win-x64**.
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c43553f4-1d25-4a24-a683-2452d16beafa" />
+  Установка не требуется, нужно распаковать файлы из архива в удобную папку, но 	лучше всего распаковать в _C:\SQLite_.
+
+---
+  
+* **1.5 OpenSSL** [Скачать здесь](https://slproweb.com/products/Win32OpenSSL.html). Нужна полная версия.  
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/335d9e4a-1f98-4ec4-aff7-fc887f9b3e4b" />  
+  Здесь выбираем «The OpenSSL binaries (/bin) directory».  
+  <img width="498" height="388" alt="image" src="https://github.com/user-attachments/assets/c87d91ce-b0ca-48e6-a987-2d70c188f86e" />  
+
+---
+  
+* **1.6 Strawberry Perl** [Скачать здесь](https://strawberryperl.com/) Просто устанавливаем, ничего не меняя.
+
+---
+  
+* **1.7 CMake** [Скачать здесь](https://cmake.org/download/). Выбираем **Windows x64 Installer**.
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4aa9a3de-c979-4564-b780-200a6d691198" />
+
+Просто устанавливаем, ничего не меняя.
+
+---
+
+* **1.8 NASM** [Скачать здесь](https://www.nasm.us/pub/nasm/releasebuilds/2.16.03/win64/).
+Запускаем установщик от имени администратора. Выбираем «Install for everyone using this computer».
+
+<img width="497" height="361" alt="image" src="https://github.com/user-attachments/assets/b6c8c4af-a945-4d85-9b40-0ddbaba61437" />
+
+Затем оставляем все пункты отмеченными и устанавливаем.
+
+<img width="497" height="361" alt="image" src="https://github.com/user-attachments/assets/b34dd5ea-51fd-4b7d-8b0e-88c39a2ca0a8" />
+
+---
+
+* **1.9 Protoc** Нажимаем `Win+R`, затем пишем **cmd** и жмём `Ctrl + Shift + Enter` (чтобы терминал запустился от имени администратора). В терминале пишем команду:
+  ```bash
+  winget install --id Google.Protobuf -e --source winget
+  ```
+  Далее просто устонавливаем.
+
+---
+
+* **1.10** После установки всех необходимых программ на всякий случай перезапускаем ПК.
+
+### 2. Проверка переменных среды системы
+Теперь нужно проверить добавились ли пути к папкам с установленными программами в переменных системы (это нужно для того, чтобы команды в CMD могли работать с этими программами).
+
+* **2.1** Жмём `Win+R`, пишем **sysdm.cpl** и жмём «ОК».
+
+---
+
+* **2.2** Открываем вкладку **Дополнительно** и нажимаем на **Переменные среды**.
+<img width="343" height="379" alt="image" src="https://github.com/user-attachments/assets/c665888c-9b88-40d2-87e3-afef9917b667" />
+
+---
+
+* **2.3** 
+
+
+
+
