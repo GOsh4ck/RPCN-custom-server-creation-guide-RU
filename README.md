@@ -43,7 +43,7 @@ winget install Microsoft.VisualStudio.2022.Community --override "--add Microsoft
 
 ---
   
-* **1.7** [CMake]https://cmake.org/download/). Выбираем **Windows x64 Installer**.
+* **1.7** [CMake](https://cmake.org/download/). Выбираем **Windows x64 Installer**.
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4aa9a3de-c979-4564-b780-200a6d691198" />
 
@@ -62,7 +62,7 @@ winget install Microsoft.VisualStudio.2022.Community --override "--add Microsoft
 
 ---
 
-* **1.9** Protoc Нажимаем `Win+R`, затем пишем **cmd** и жмём `Ctrl + Shift + Enter` (чтобы терминал запустился от имени администратора). В терминале пишем команду:
+* **1.9** Protoc Нажимаем `Win+R`, затем пишем *cmd* и жмём `Ctrl + Shift + Enter` (чтобы терминал запустился от имени администратора). В терминале пишем команду:
   ```bash
   winget install --id Google.Protobuf -e --source winget
   ```
@@ -184,8 +184,8 @@ git clone https://github.com/RipleyTom/rpcn.git
 ```bash
 cargo build --release
 ```
-Далее начнётся копмиляция. Это процесс не быстрый, так что не пугаемся если покажется, что компиляция зависла, главное, чтобы в логе не было слов ***warning*** и ***error***.  
-Если в конце компиляции появилась фраза *Finished 'release' profile [optimized] target(s) in %m 3%s*, значит всё прошло успешно.  
+Далее начнётся компиляция. Это процесс не быстрый, так что не пугаемся если покажется, что компиляция зависла, главное, чтобы в логе не было слов ***warning*** и ***error***.  
+Если в конце компиляции появилась фраза *Finished 'release' profile [optimized] target(s) in %m %s*, значит всё прошло успешно.  
 
 <img width="960" height="97" alt="C__Windows_System32_cmd exe 25 01 2026 1_56_56" src="https://github.com/user-attachments/assets/13a9e155-2355-4cae-a7ca-42a836e98c61" />
 
@@ -359,8 +359,6 @@ pause
 
 <img width="698" height="561" alt="image" src="https://github.com/user-attachments/assets/9822602e-2886-4895-a7c3-517576c18c3d" />
 
-> При смене сервера настройки *Network* менять не требуется.
-
 
 ### 9. Проверка работоспособности
 Далее надо проверить всё ли работает. Для этого заходим в игру, выбираем онлайн режим. Если в онлайне можно создать лобби, зайти в ранговый матч (в случае с файтингами), то это значит, что сервер работает.
@@ -370,7 +368,7 @@ pause
 Чтобы к нам могли подключаться клиенты (люди с которыми собираемся играть), нужно создать сеть в Radmin VPN.
 > Эта программа создаст виртуальную локальную сеть между компьютерами и сгенерирует статичный IP, что избавит от настроек сети клиентов.
 
-* **10.1**  Качаем [Radmin VPN](https://www.radmin-vpn.com/ru/help/code56/) и запускаем программу и жмём на красный круг.
+* **10.1**  Качаем [Radmin VPN](https://www.radmin-vpn.com/ru/help/code56/), запускаем программу и жмём на красный круг.
 > Первое подключение может быть долгим
 
 При удачном подключении круг станет голубым, рядом появится сгенерированный IP (он-то и нужен будет клиентам).
