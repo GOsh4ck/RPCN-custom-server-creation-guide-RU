@@ -3,46 +3,47 @@
 ### 1. Подготовка программного обеспечения
 > :warning: Пути установки не меняем, это облегчит жизнь в дальнейшем.
 
-* **1.1 Git SCM:** [Скачать здесь](https://git-scm.com/install/windows)  
-  (Все параметры установки оставляем по умолчанию).
+
+* **1.1** [Git SCM](https://git-scm.com/install/windows)  
+  Все параметры установки оставляем по умолчанию.
 
 ---
   
-* **1.2 Visual Studio 2022:**
+* **1.2** Visual Studio 2022
   (Сама программа не нужна, нужны её библиотеки).
-  Нажимаем `Win+R`, затем пишем cmd и жмём `Ctrl + Shift + Enter` (чтобы терминал запустился от имени администратора). В терминале пишем команду:  
+  Нажимаем `Win+R`, затем пишем *cmd* и жмём `Ctrl + Shift + Enter` (чтобы терминал запустился от имени администратора). В терминале пишем команду:  
 ```bash
 winget install Microsoft.VisualStudio.2022.Community --override "--add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended --passive"
 ```
-  После этого надо согласиться с условиями пользователя, для этого пишем **Y** жмём `Enter`. Далее скачивание и установка произойдут автоматически.
+  После этого надо согласиться с условиями пользователя, для этого пишем *Y* жмём `Enter`. Далее скачивание и установка произойдут автоматически.
 
 ---
   
-* **1.3 Rust** [Скачать здесь](https://rust-lang.org/tools/install/)  
+* **1.3** [Rust](https://rust-lang.org/tools/install/)  
   После запуска установщика, будет предложено три параметра. Нам нужен первый, так что просто жмём `Enter`.   
   <img width="625" height="313" alt="image" src="https://github.com/user-attachments/assets/780d779f-c844-4b3f-81e7-5c8cd0ae08f8" />
 
 ---
   
-* **1.4 SQLite** [Скачать здесь](https://sqlite.org/download.html).
+* **1.4** [SQLite](https://sqlite.org/download.html).
   В названии нужного архива должно быть **sqlite-tools-win-x64**.
   <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c43553f4-1d25-4a24-a683-2452d16beafa" />
   Установка не требуется, нужно распаковать файлы из архива в удобную папку, но 	лучше всего распаковать в _C:\SQLite_.
 
 ---
   
-* **1.5 OpenSSL** [Скачать здесь](https://slproweb.com/products/Win32OpenSSL.html). Нужна полная версия.  
+* **1.5** [OpenSSL](https://slproweb.com/products/Win32OpenSSL.html). Нужна полная версия.  
   <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/335d9e4a-1f98-4ec4-aff7-fc887f9b3e4b" />  
   Здесь выбираем «The OpenSSL binaries (/bin) directory».  
   <img width="498" height="388" alt="image" src="https://github.com/user-attachments/assets/c87d91ce-b0ca-48e6-a987-2d70c188f86e" />  
 
 ---
   
-* **1.6 Strawberry Perl** [Скачать здесь](https://strawberryperl.com/) Просто устанавливаем, ничего не меняя.
+* **1.6** [Strawberry Perl](https://strawberryperl.com/) Просто устанавливаем, ничего не меняя.
 
 ---
   
-* **1.7 CMake** [Скачать здесь](https://cmake.org/download/). Выбираем **Windows x64 Installer**.
+* **1.7** [CMake]https://cmake.org/download/). Выбираем **Windows x64 Installer**.
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4aa9a3de-c979-4564-b780-200a6d691198" />
 
@@ -50,7 +51,7 @@ winget install Microsoft.VisualStudio.2022.Community --override "--add Microsoft
 
 ---
 
-* **1.8 NASM** [Скачать здесь](https://www.nasm.us/pub/nasm/releasebuilds/2.16.03/win64/).
+* **1.8** [NASM](https://www.nasm.us/pub/nasm/releasebuilds/2.16.03/win64/).
 Запускаем установщик от имени администратора. Выбираем «Install for everyone using this computer».
 
 <img width="497" height="361" alt="image" src="https://github.com/user-attachments/assets/b6c8c4af-a945-4d85-9b40-0ddbaba61437" />
@@ -61,11 +62,11 @@ winget install Microsoft.VisualStudio.2022.Community --override "--add Microsoft
 
 ---
 
-* **1.9 Protoc** Нажимаем `Win+R`, затем пишем **cmd** и жмём `Ctrl + Shift + Enter` (чтобы терминал запустился от имени администратора). В терминале пишем команду:
+* **1.9** Protoc Нажимаем `Win+R`, затем пишем **cmd** и жмём `Ctrl + Shift + Enter` (чтобы терминал запустился от имени администратора). В терминале пишем команду:
   ```bash
   winget install --id Google.Protobuf -e --source winget
   ```
-  Далее просто устонавливаем.
+  Далее просто устанавливаем.
 
 ---
 
@@ -369,7 +370,7 @@ pause
 Чтобы к нам могли подключаться клиенты (люди с которыми собираемся играть), нужно создать сеть в Radmin VPN.
 > Эта программа создаст виртуальную локальную сеть между компьютерами и сгенерирует статичный IP, что избавит от настроек сети клиентов.
 
-* **10.1**  [Качаем](https://www.radmin-vpn.com/ru/help/code56/) Radmin VPN и запускаем программу и жмём на красный круг.
+* **10.1**  Качаем [Radmin VPN](https://www.radmin-vpn.com/ru/help/code56/) и запускаем программу и жмём на красный круг.
 > Первое подключение может быть долгим
 
 При удачном подключении круг станет голубым, рядом появится сгенерированный IP (он-то и нужен будет клиентам).
