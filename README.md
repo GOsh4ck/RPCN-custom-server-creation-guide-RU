@@ -18,7 +18,7 @@ RPCN отлично подходит для игр, в которых соеди
 ```bash
 winget install Microsoft.VisualStudio.2022.Community --override "--add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended --passive"
 ```
-  После этого надо согласиться с условиями пользователя, для этого пишем *Y* жмём `Enter`. Далее скачивание и установка произойдут автоматически.
+  После этого надо согласиться с условиями пользователя, для этого пишем ***Y*** жмём `Enter`. Далее скачивание и установка произойдут автоматически.
 
 ---
   
