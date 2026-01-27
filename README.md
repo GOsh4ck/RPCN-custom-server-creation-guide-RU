@@ -399,7 +399,14 @@ pause
 
 ### 12. Обновление сервера
 
-Если при подключении к серверу эмулятор выдаст ошибку ***RPCN: Protocol version mismatch*** или что-то подобное, это может означать, что, скорее всего, вышла новая версия сервера, и пора обновляться.
+Если при подключении к серверу эмулятор выдаст ошибку  
+`Error Connecting to RPCN`  
+`Failed to Connect to RPCN server`  
+`RPCN Misc Error: Protocol Version Error (outdated RPCS3?)`  
+
+<img width="381" height="99" alt="RPCS3 0 0 39-18737-818b11fd Alpha _ master 27 01 2026 5_23_15" src="https://github.com/user-attachments/assets/dc2f6b2a-12b2-4758-b5ce-e6273681d537" />  
+
+это может означать, что, скорее всего, вышла новая версия сервера, и пора обновляться.
 Для этого заходим в папку с сервером, запускаем оттуда *cmd* и вбиваем поочерёдно следующие команды:
 ```bash
 git stash
