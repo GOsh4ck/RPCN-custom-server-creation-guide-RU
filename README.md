@@ -97,9 +97,9 @@ winget install Microsoft.VisualStudio.2022.Community --override "--add Microsoft
 
 * **2.3** В открывшемся окне в верхней таблице **Переменные пользователя** нажимаем на переменную **Path**, потом на «Изменить».
 Там должна быть строчка:
-```bash
-C:\Users\G0sh4ck\AppData\Local\Microsoft\WinGet\Links
-```
+
+`C:\Users\%имя пользователя%\AppData\Local\Microsoft\WinGet\Links`  
+
 
 ---
 
